@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta property="og:title" content="Treyas Info Tech"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:type" content="Education Website"/>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/png" />
+    <title>Treyas Info Tech</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/nice-select/css/nice-select.css') }}" />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                alert("{{ messages[0] }}");
+            </script>
+        {% endif %}
+    {% endwith %}
+  </head>
+ 
+
+  <body>
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <div class="search_input" id="search_input_box">
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              <input
+                type="text"
+                class="form-control"
+                id="search_input"
+                placeholder="Search Here"
+              />
+              <button type="submit" class="btn"></button>
+              <span
+                class="ti-close"
+                id="close_search"
+                title="Close Search"
+              ></span>
+            </form>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg  ">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html" >
+              <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="100px" height="80px"/>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link  " href="{{ url_for('about') }}">About</a>
+                </li>
+                 
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle "
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Courses</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Technology_training') }}">Technology training</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Power_BI') }}">Power BI</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Tablue') }}">Tablue</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('SQL') }}">SQL</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Salesforce') }}">Salesforce</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Full_stack_development') }}">Full stack development</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Python') }}">Python</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Product_management_courses') }}">Product management courses</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link search" id="search">
+                    <i class="ti-search"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="banner_content text-center">
+                <h2>About Us</h2>
+                <div class="page_link">
+                  <a href="index.html">Home</a>
+                  <a href="about-us.html">About Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================ Start About Area =================-->
+    <section class="about_area section_gap">
+      <div class="container">
+        <div class="row h_blog_item">
+          <div class="col-lg-6">
+            <div class="h_blog_img">
+              <img class="img-fluid" src="{{ url_for('static', filename='img/about.png') }}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="h_blog_text">
+              <div class="h_blog_text_inner left right">
+                <h4>Welcome to our Institute</h4>
+                <h6>Join the quest for tech excellence at the Banjara Hills Campus in Hyderabad - School of Technology & AI.</h6>
+                <br>
+                <p>
+                  Embark on a journey into the future with the School of Tech and AI. We are the incubator for minds that will shape the technological landscape of tomorrow.
+                  <br> 
+                  Our commitment lies in providing cutting-edge professional training courses and state-of-the-art facilities, empowering students to harness the power of technology and artificial intelligence.
+                </p>
+                <p>
+                  From exploring the realms of Data Science and AI to mastering Cybersecurity and more, we are dedicated to cultivating the skills that drive progress in the digital age. 
+                  <br>
+                  Welcome to a place where innovation meets education, and the future unfolds in every lesson we teach.
+                </p>
+                <a class="primary-btn" href="#">
+                  Learn More <i class="ti-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End About Area =================-->
+
+    <!--================ Start Feature Area =================-->
+    <section class="feature_area section_gap_top title-bg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="main_title">
+              <h2 class="mb-3 text-white">Keys to Boost Your Professional Growth</h2>
+              <p>
+                Elevate your career to new heights with confidence and expertise.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-student"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Diverse Skill Mastery</h4>
+                <p>
+                  Acquire a versatile skill set, confidently navigating and excelling in various industry challenges. Ensure readiness for a spectrum of professional scenarios with a comprehensive foundation.
+                  <br><br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-book"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Mentorship Prowess</h4>
+                <p>
+                  Elevate your career through Premier Mentorship, gaining tailored guidance and industry insights from seasoned experts. Harness mentorship prowess for a transformative impact on your professional journey.
+                <br> <br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-earth"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Real-world Proficiency</h4>
+                <p>
+                  Attain practical wisdom by actively participating in industry challenges and hands-on projects. Put theory into action through Practical Deployment in Real-world Settings, developing a robust skill set honed in real-world scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End Feature Area =================-->
+
+   <!--================ Start Testimonial Area =================-->
+   <div class="testimonial_area section_gap">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="main_title">
+            <h2 class="mb-3">Testimonials About us</h2>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="testi_slider owl-carousel">
+          <div class="testi_item">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img src="{{ url_for('static', filename='img/testimonials/t1.jpg') }}" alt="" />
+              </div>
+              <div class="col-lg-8">
+                <div class="testi_text">
+                  <h4>Naveen</h4>
+                  <p>
+                    Empowered by cybersecurity! Transformed from novice to ethical hacker through an intense journey. Course completed, skills acquired, now safeguarding digital frontiers. Turning passion into a secure profession, one hack at a time!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testi_item">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img src="{{ url_for('static', filename='img/testimonials/t2.jpg') }}" alt="" />
+              </div>
+              <div class="col-lg-8">
+                <div class="testi_text">
+                  <h4>Divya Menon</h4>
+                  <p>
+                    Embarked on the Full Stack Development journey with enthusiasm!  Highly recommend this transformative learning experience!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testi_item">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img src="{{ url_for('static', filename='img/testimonials/t1.jpg') }}" alt="" />
+              </div>
+              <div class="col-lg-8">
+                <div class="testi_text">
+                  <h4>Arjun Patel</h4>
+                  <p>
+                    Embarked on a rewarding journey in Java Programming!  Successfully completed the program, acquiring essential skills for Java development. Now, ready to tackle real-world projects with confidence. A fantastic learning experience that has truly enhanced my programming proficiency.  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testi_item">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <img src="{{ url_for('static', filename='img/testimonials/t2.jpg') }}" alt="" />
+              </div>
+              <div class="col-lg-8">
+                <div class="testi_text">
+                  <h4>Divya Menon</h4>
+                  <p>
+                    Embarked on the Full Stack Development journey with enthusiasm!  Highly recommend this transformative learning experience!
+                  </p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--================ End Testimonial Area =================-->
+
+   <!--================ Start footer Area  =================-->
+   <footer class="footer-area section_gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 single-footer-widget">
+          <img src="{{ url_for('static', filename='img/footer.png') }}" alt="" width="250px" height="200px"/>
+        </div>
+        <div class="col-lg-4 col-md-6 single-footer-widget">
+          <h4>Top Enrolled Courses
+            
+            
+             </h4>
+          <ul>
+            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Tablue</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">SQL</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Salesforce</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Full stack development</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Python</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Product management courses</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Product management and analytics</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Agile methodologies training</a></li>  
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+          <h4>Browse
+            </h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home
+               </a></li>
+            <li><a href="{{ url_for('about') }}">About </a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        
+        <div class="col-lg-3 col-md-6 single-footer-widget">
+          <h4>Newsletter</h4>
+          <p>You can trust us. we only send promo offers,</p>
+          <div class="form-wrap" id="mc_embed_signup">
+            <form
+              target="_blank"
+              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+              method="get"
+              class="form-inline"
+            >
+              <input
+                class="form-control"
+                name="EMAIL"
+                placeholder="Your Email Address"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Your Email Address'"
+                required=""
+                type="email"
+              />
+              <button class="click-btn btn btn-default">
+                <span>subscribe</span>
+              </button>
+              <div style="position: absolute; left: -5000px;">
+                <input
+                  name="b_36c4fd991d266f23781ded980_aefe40901a"
+                  tabindex="-1"
+                  value=""
+                  type="text"
+                />
+              </div>
+
+              <div class="info"></div>
+            </form>
+          </div>
+        </div>
+       
+      </div>
+     
+      <div class="row footer-bottom d-flex justify-content-between">
+        <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by Treyas Info Tech PVT LTD
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+        <div class="col-lg-4 col-sm-12 footer-social">
+          <a href="#"><i class="ti-facebook"></i></a>
+          <a href="#"><i class="ti-twitter"></i></a>
+          <a href="#"><i class="ti-dribbble"></i></a>
+          <a href="#"><i class="ti-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/nice-select/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl-carousel-thumb.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="{{ url_for('static', filename='js/gmaps.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+  </body>
+</html>
