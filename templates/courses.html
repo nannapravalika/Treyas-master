@@ -85,7 +85,7 @@
                  
                 <li class="nav-item submenu dropdown">
                   <a
-                    href="#"
+                    href="{{ url_for('courses') }}"
                     class="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                     role="button"
@@ -95,17 +95,34 @@
                   >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('cybersecurity_ethicalhacking_page') }}">Cyber Security and Ethical Hacking</a>
+                      <a class="nav-link" href="{{ url_for('Technology_training') }}">Technology training</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('web_development_page') }}"
-                        >Full Stack Web Development</a
-                      >
+                      <a class="nav-link" href="{{ url_for('Power_BI') }}">Power BI</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('java_programmin_page') }}"
-                        >Java Programming</a
-                      >
+                      <a class="nav-link" href="{{ url_for('Tablue') }}">Tablue</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('SQL') }}">SQL</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Salesforce') }}">Salesforce</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Full_stack_development') }}">Full stack development</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Python') }}">Python</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Product_management_courses') }}">Product management courses</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a>
                     </li>
                   </ul>
                 </li>
@@ -148,93 +165,277 @@
 
     <br><br>
 
-    <!--================ Start Popular Courses Area =================-->
-    
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3">Our Offered Programs</h2>
-              <p>
-                Explore tailored programs for a successful learning journey
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- single course -->
-          <div class="col-lg-12">
-            <div class="owl-carousel active_course">
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c1.jpg') }}" alt="" />
-                </div>
-                <div class="course_content">
-                  
-                   
-                  <h4 class="mb-3">
-                    <a href="course-details.html">Cyber Security and Ethical Hacking</a>
-                  </h4>
-                  <p>
-                    Delve into the realms of cybersecurity and ethical hacking, safeguarding digital landscapes through expert knowledge and ethical practices.
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                     
-                  </div>
-                </div>
-              </div>
-
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
-                </div>
-                <div class="course_content">
-                  
-                  <h4 class="mb-3">
-                    <a href="course-details.html">
-                      Full Stack Web Development
-                      </a>
-                  </h4>
-                  <p>
-                    Embark on a dynamic journey in full-stack web development, mastering both front-end and back-end technologies to create seamless, interactive online experiences.
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                     
-                  </div>
-                </div>
-              </div>
-
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c3.jpg') }}" alt="" />
-                </div>
-                <div class="course_content">
-                  
-                  
-                  <h4 class="mb-3">
-                    <a href="course-details.html">Java Programming</a>
-                  </h4>
-                  <p>
-                    Master the art of Java programming, empowering yourself with the skills to build robust and versatile applications."
-                    <br><br><br>
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
+   <!--================ Start Popular Courses Area =================-->
+   <div class="popular_courses">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="main_title">
+            <br><br>
+            <h2 class="mb-3 ">Our Offered Programs</h2>
+            <p>
+              Explore tailored programs for a successful learning journey
+            </p>
           </div>
         </div>
       </div>
      
-    <!--================ End Popular Courses Area =================-->
+      <div class="row">
+       
+        <!-- single course -->
+        <div class="col-lg-12">
+          <div class="owl-carousel active_course">
+        
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c1.jpg') }}" alt="" />
+              </div>
+              <div class="course_content"> 
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Technology_training') }}">
+                    Technology training</a>
+                </h4>
+                <p>
+                  Technology Training provides a hands-on learning experience, empowering participants with essential skills for navigating the evolving landscape of modern technologies.
+                </p>
+                <br><br>
+                <br>
+              </div>
+            </div>
+
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Power_BI') }}">
+                    Power BI
+
+                    </a>
+                </h4>
+                <p>
+                  The Power BI course enables participants to master data visualization and business intelligence, leveraging Microsoft's powerful tool for insightful and impactful data analysis.
+                </p>
+                <br><br>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c3.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('SQL') }}">
+                    SQL
+                    
+
+                    </a>
+                </h4>
+                <p>
+                  The SQL course equips participants with the fundamental skills to manage and query databases effectively, fostering a solid foundation for data manipulation and analysis.
+                </p>
+                <br><br>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Salesforce') }}">
+                    Salesforce
+                    
+
+                    </a>
+                </h4>
+                <p>
+                  The Salesforce course provides expertise in maximizing customer relationship management through the dynamic Salesforce platform.
+                </p>
+                <br><br><br>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c1.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Full_stack_development') }}">
+                    Full stack development
+                   
+
+                    </a>
+                </h4>
+                <p>
+                  Full Stack Development course empowers learners with the skills to design and implement dynamic web applications, spanning both front-end and back-end technologies.
+                </p>
+                <br><br>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Python') }}">
+                    Python
+                     
+
+                    </a>
+                </h4>
+                <p>
+                  The Python course offers a versatile programming foundation, empowering participants to master a language widely used for web development, data analysis, artificial intelligence, and automation.
+                </p>
+                <br>
+                 
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c3.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Agile_methodologies_training') }}">
+                    
+                    Agile methodologies training
+
+                    </a>
+                </h4>
+                <p>
+                  Agile Methodologies training provides a dynamic skill set for project management, emphasizing flexibility and collaboration to efficiently adapt to evolving business needs.
+                </p>
+                <br><br>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Product_management_courses') }}">     
+                    Product management courses
+                    
+
+                    </a>
+                </h4>
+                <p>
+                  Product Management courses equip individuals with strategic skills to drive successful product development, from ideation to market launch, in today's competitive business landscape.
+                </p>
+                <br>
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Product_management_and_analytics') }}"> 
+                    Product management and analytics  
+                    </a>
+                </h4>
+                <p>
+                  Product Management and Analytics course integrates strategic product development skills with data analytics, empowering professionals to make informed decisions and drive successful product outcomes.
+                </p>
+                
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                   
+                </div>
+              </div>
+            </div>
+
+            <div class="single_course">
+              <div class="course_head">
+                <br>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c3.jpg') }}" alt="" />
+              </div>
+              <div class="course_content">
+                
+                
+                <h4 class="mb-3 text-white">
+                  <a href="{{ url_for('Tablue') }}">Tablue
+                   </a>
+                </h4>
+                <p>
+                  Tableau training imparts expertise in data visualization, enabling participants to create interactive and impactful dashboards for effective business insights.
+                  
+                </p>
+                <br><br> 
+                <div
+                  class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                >
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+       
+      </div>
+     
+    </div>
+  </div>
+  <!--================ End Popular Courses Area =================-->
    
     <!--================ Start Registration Area =================-->
     <div class="section_gap registration_area">
@@ -353,98 +554,75 @@
   </section>
   <!--================ End Feature Area =================-->
 
-   <!--================ Start footer Area  =================-->
-   <footer class="footer-area section_gap">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 single-footer-widget">
-          <img src="{{ url_for('static', filename='img/footer.png') }}" alt="" width="250px" height="200px"/>
-        </div>
-        <div class="col-lg-4 col-md-6 single-footer-widget">
-          <h4>Top Enrolled Courses
-            
-            
-             </h4>
-             <ul>
-              <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
-              <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
-              <li><a href="{{ url_for('Tablue') }}">Tablue</a></li>
-              <li><a href="{{ url_for('SQL') }}">SQL</a></li>
-              <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
-              <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
-              <li><a href="{{ url_for('Python') }}">Python</a></li>
-              <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
-              <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
-              <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
-            </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 single-footer-widget">
-          <h4>Browse
-            </h4>
-          <ul>
-            <li><a href="{{ url_for('index') }}">Home
-               </a></li>
-            <li><a href="{{ url_for('about') }}">About </a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        
-        
-        <div class="col-lg-3 col-md-6 single-footer-widget">
-          <h4>Newsletter</h4>
-          <p>You can trust us. we only send promo offers,</p>
-          <div class="form-wrap" id="mc_embed_signup">
-            <form
-              target="_blank"
-              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-              method="get"
-              class="form-inline"
-            >
-              <input
-                class="form-control"
-                name="EMAIL"
-                placeholder="Your Email Address"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Your Email Address'"
-                required=""
-                type="email"
-              />
-              <button class="click-btn btn btn-default">
-                <span>subscribe</span>
-              </button>
-              <div style="position: absolute; left: -5000px;">
-                <input
-                  name="b_36c4fd991d266f23781ded980_aefe40901a"
-                  tabindex="-1"
-                  value=""
-                  type="text"
-                />
-              </div>
 
-              <div class="info"></div>
-            </form>
-          </div>
-        </div>
-       
+<!--================ Start footer Area  =================-->
+<footer class="footer-area section_gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 single-footer-widget">
+        <img src="{{ url_for('static', filename='img/footer.png') }}" alt="" width="250px" height="200px"/>
+      </div>
+      <div class="col-lg-4 col-md-6 single-footer-widget">
+        <h4>Top Enrolled Courses</h4>
+           <ul>
+            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+            <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
+            <li><a href="{{ url_for('Tablue') }}">Tablue</a></li>
+            <li><a href="{{ url_for('SQL') }}">SQL</a></li>
+            <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
+            <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
+            <li><a href="{{ url_for('Python') }}">Python</a></li>
+            <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+            <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
+            <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
+          </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 single-footer-widget">
+        <h4>Browse
+          </h4>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home
+             </a></li>
+          <li><a href="{{ url_for('about') }}">About </a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      
+      <div class="col-lg-3 col-md-6 single-footer-widget">
+        <h4>Treyas Info Tech PVT LTD</h4>
+        <!-- Email Link -->
+        <p>Email: <a href="mailto:info@treyas.in" class="text-white">info@treyas.in</a></p>
+
+        <!-- WhatsApp Link -->
+        <p>WhatsApp: <a href="https://wa.me/+91 96639 61274" class="text-white" target="_blank">+91 96639 61274</a></p>
+
+        <!-- Google Maps Link -->
+        <p class="text-white">Location: Banjara Hills, Hyderabad</a></p>
+
+        
       </div>
      
-      <div class="row footer-bottom d-flex justify-content-between">
-        <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+    </div>
+   
+    <div class="row footer-bottom d-flex justify-content-between">
+      <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
 
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by Treyas Info Tech PVT LTD
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </p>
-        <div class="col-lg-4 col-sm-12 footer-social">
-          <a href="#"><i class="ti-facebook"></i></a>
-          <a href="#"><i class="ti-twitter"></i></a>
-          <a href="#"><i class="ti-dribbble"></i></a>
-          <a href="#"><i class="ti-linkedin"></i></a>
-        </div>
+      </p>
+      <div class="col-lg-4 col-sm-12 footer-social">
+        <a href="#"><i class="ti-facebook"></i></a>
+        <a href="#"><i class="ti-twitter"></i></a>
+        <a href="#"><i class="ti-dribbble"></i></a>
+        <a href="#"><i class="ti-linkedin"></i></a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
