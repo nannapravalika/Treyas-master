@@ -126,7 +126,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html" >
+            <a class="navbar-brand logo_h" href="{{ url_for('index') }}" >
               <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="100px" height="80px"/>
             </a>
             <button
@@ -223,9 +223,9 @@
               <div class="banner_content text-center">
                 <h2>Python</h2>
                 <div class="page_link">
-                  <a href="index.html">Home</a>
-                  <a href="courses.html">Courses</a>
-                  <a href="course-details.html">Python</a>
+                  <a href="{{ url_for('index') }}">Home</a>
+                  <a href="{{ url_for('courses') }}">Courses</a>
+                  <a href="{{ url_for('Python') }}">Python</a>
                 </div>
               </div>
             </div>
@@ -529,18 +529,18 @@
             
             
              </h4>
-          <ul>
-            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Tablue</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">SQL</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Salesforce</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Full stack development</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Python</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Product management courses</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Product management and analytics</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Agile methodologies training</a></li>  
-          </ul>
+             <ul>
+              <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+              <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
+              <li><a href="{{ url_for('Tablue') }}">Tablue</a></li>
+              <li><a href="{{ url_for('SQL') }}">SQL</a></li>
+              <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
+              <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
+              <li><a href="{{ url_for('Python') }}">Python</a></li>
+              <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+              <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
+              <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
+            </ul>
         </div>
         <div class="col-lg-2 col-md-6 single-footer-widget">
           <h4>Browse

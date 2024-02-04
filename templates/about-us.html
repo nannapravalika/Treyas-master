@@ -55,7 +55,7 @@
         <nav class="navbar navbar-expand-lg  ">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html" >
+            <a class="navbar-brand logo_h" href="{{ url_for('index') }}" >
               <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="100px" height="80px"/>
             </a>
             <button
@@ -152,8 +152,8 @@
               <div class="banner_content text-center">
                 <h2>About Us</h2>
                 <div class="page_link">
-                  <a href="index.html">Home</a>
-                  <a href="about-us.html">About Us</a>
+                  <a href="{{ url_for('index') }}">Home</a>
+                  <a href="{{ url_for('about') }}">About Us</a>
                 </div>
               </div>
             </div>
@@ -278,8 +278,7 @@
                 <div class="testi_text">
                   <h4>Naveen</h4>
                   <p>
-                    Empowered by cybersecurity! Transformed from novice to ethical hacker through an intense journey. Course completed, skills acquired, now safeguarding digital frontiers. Turning passion into a secure profession, one hack at a time!
-                  </p>
+                    I learned a lot and became really good at Power BI. Now, I use my skills to turn my love for data into a job, creating meaningful visualizations along the way!   </p>
                 </div>
               </div>
             </div>
@@ -293,7 +292,7 @@
                 <div class="testi_text">
                   <h4>Divya Menon</h4>
                   <p>
-                    Embarked on the Full Stack Development journey with enthusiasm!  Highly recommend this transformative learning experience!
+                    Started learning Full Stack Development with excitement! Really recommend this amazing learning experience that can change your skills!
                   </p>
                 </div>
               </div>
@@ -308,7 +307,7 @@
                 <div class="testi_text">
                   <h4>Arjun Patel</h4>
                   <p>
-                    Embarked on a rewarding journey in Java Programming!  Successfully completed the program, acquiring essential skills for Java development. Now, ready to tackle real-world projects with confidence. A fantastic learning experience that has truly enhanced my programming proficiency.  
+                    Dived into Product Management courses, gained valuable insights! Finished the program, feeling confident for real-world projects—a fantastic learning journey that truly leveled up my skills.
                   </p>
                 </div>
               </div>
@@ -323,7 +322,7 @@
                 <div class="testi_text">
                   <h4>Divya Menon</h4>
                   <p>
-                    Embarked on the Full Stack Development journey with enthusiasm!  Highly recommend this transformative learning experience!
+                    Started learning Full Stack Development with excitement! Really recommend this amazing learning experience that can change your skills!
                   </p>
                 </div>
                 </div>
@@ -349,18 +348,18 @@
             
             
              </h4>
-          <ul>
-            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Tablue</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">SQL</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Salesforce</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Full stack development</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Python</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Product management courses</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Product management and analytics</a></li>
-            <li><a href="{{ url_for('Power_BI') }}">Agile methodologies training</a></li>  
-          </ul>
+             <ul>
+              <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+              <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
+              <li><a href="{{ url_for('Tablue') }}">Tablue</a></li>
+              <li><a href="{{ url_for('SQL') }}">SQL</a></li>
+              <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
+              <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
+              <li><a href="{{ url_for('Python') }}">Python</a></li>
+              <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+              <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
+              <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
+            </ul>
         </div>
         <div class="col-lg-2 col-md-6 single-footer-widget">
           <h4>Browse
