@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request,redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 
@@ -5,7 +6,8 @@ app = Flask(__name__)
 app.secret_key = 'treyas19012024'
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///forms.db'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    # postgres://treyas_user:MiO3siLFd4jS5CUTjE79840SZYszUfwZ@dpg-cmv6jc0l5elc73eckmlg-a.oregon-postgres.render.com/treyas
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 app.config.from_object(Config)
