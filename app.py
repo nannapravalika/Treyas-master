@@ -55,10 +55,10 @@ def Power_BI():
   
     return render_template('Power_BI.html')
 
-@app.route('/Tablue')
-def Tablue():
+@app.route('/Tableau')
+def Tableau():
     
-    return render_template('Tablue.html')
+    return render_template('Tableau.html')
 
 @app.route('/SQL')
 def SQL():
