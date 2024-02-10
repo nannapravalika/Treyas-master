@@ -76,22 +76,22 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .section_gap {
-  padding: 130px 0; }
+  padding: 40px 0; }
   @media (max-width: 991px) {
     .section_gap {
-      padding: 70px 0; } }
+      padding: 40px 0; } }
 
 .section_gap_top {
-  padding-top: 130px; }
+  padding-top: 40px; }
   @media (max-width: 991px) {
     .section_gap_top {
       padding-top: 70px; } }
 
 .section_gap_bottom {
-  padding-bottom: 130px; }
+  padding-bottom: 40px; }
   @media (max-width: 991px) {
     .section_gap_bottom {
-      padding-bottom: 70px; } }
+      padding-bottom: 40px; } }
 
 /* Main Title Area css
 ============================================================================================ */
@@ -3139,7 +3139,8 @@ h6 {
   /* Footer Area css
 	============================================================================================ */
   .footer-bottom {
-    text-align: center; }
+    text-align: center;
+     }
 
   .footer-bottom .footer-social {
     text-align: center;
@@ -3307,7 +3308,7 @@ h6 {
     .footer-area .single-footer-widget .click-btn:hover {
       background-position: right center; }
   .footer-area .footer-bottom {
-    margin-top: 50px; }
+    margin-top: 10px; }
     @media (max-width: 991px) {
       .footer-area .footer-bottom {
         margin-top: 20px; } }
@@ -3344,3 +3345,111 @@ h6 {
 
 /*---------------------------------------------------- */
 
+
+/* Add styling for the two headings and underline */
+.header_area .navbar .nav .nav-item.submenu ul .col-6 .navbar-h5 {
+  display: inline-block;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #fdc632;
+  padding-bottom: 5px;
+}
+
+/* Adjust the positioning of the headings and links */
+.header_area .navbar .nav .nav-item.submenu ul .col-6 {
+  margin-bottom: 15px;
+}
+
+/* Ensure the links maintain their style */
+.header_area .navbar .nav .nav-item.submenu ul .col-6 .nav-link {
+  width:500px;
+  line-height: 50px;
+  color: #002347;
+  padding: 0px 30px;
+  display: block;
+  margin-right: 0px;
+  transition: all 150ms linear;
+}
+
+/* Add hover effect for links */
+.header_area .navbar .nav .nav-item.submenu ul .col-6 .nav-item:hover .nav-link {
+  background: #fdc632;
+  color: #fff;
+}
+
+
+    
+    /* Button used to open the contact form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+    
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+    
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+
+    .details {
+      display: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 2px solid #fdc632;
+  }

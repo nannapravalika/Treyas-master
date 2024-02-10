@@ -93,10 +93,9 @@
                     aria-expanded="false"
                     >Courses</a
                   >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Technology_training') }}">Technology training</a>
-                    </li>
+                  <ul class="dropdown-menu row">
+                    <div class="col-6">
+                   <h5 class="navbar-h5"> Technology training </h5>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Power_BI') }}">Power BI</a>
                     </li>
@@ -115,19 +114,21 @@
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Python') }}">Python</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Product_management_courses') }}">Product management courses</a>
-                    </li>
+                  </div>
+                    <div class="col-6">
+                    <h5 class="navbar-h5">Product management courses</h5>
+                     
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a>
                     </li>
+                  </div>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -201,23 +202,7 @@
           <div class="col-lg-12">
             <div class="owl-carousel active_course">
           
-              <div class="single_course">
-                <div class="course_head">
-                  <br>
-                  <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c1.jpg') }}" alt="" />
-                </div>
-                <div class="course_content"> 
-                  <h4 class="mb-3 text-white">
-                    <a href="{{ url_for('Technology_training') }}">
-                      Technology training</a>
-                  </h4>
-                  <p>
-                    Technology Training provides a hands-on learning experience, empowering participants with essential skills for navigating the evolving landscape of modern technologies.
-                  </p>
-                  <br><br>
-                  <br>
-                </div>
-              </div>
+               
 
               <div class="single_course">
                 <div class="course_head">
@@ -369,31 +354,7 @@
                   </div>
                 </div>
               </div>
-              <div class="single_course">
-                <div class="course_head">
-                  <br>
-                  <img class="img-fluid" src="{{ url_for('static', filename='img/courses/c2.jpg') }}" alt="" />
-                </div>
-                <div class="course_content">
-                  
-                  <h4 class="mb-3 text-white">
-                    <a href="{{ url_for('Product_management_courses') }}">     
-                      Product management courses
-                      
-
-                      </a>
-                  </h4>
-                  <p>
-                    Product Management courses equip individuals with strategic skills to drive successful product development, from ideation to market launch, in today's competitive business landscape.
-                  </p>
-                  <br>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                     
-                  </div>
-                </div>
-              </div>
+               
               <div class="single_course">
                 <div class="course_head">
                   <br>
@@ -517,33 +478,16 @@
           <div class="col-lg-7">
             <div class="row clock_sec clockdiv" id="clockdiv">
               <div class="col-lg-12">
-                <h1 class="mb-3">Register Now</h1>
+                <h1 class="mb-3">Ready to Transform Your Business?</h1>
                 <p>
-                  Embark on a fortified academic expedition with our steadfast support. Whether unraveling inquiries or offering insightful guidance, our commitment is to steer you towards triumph!
+                  Unlock the full potential of your business with Treyas Info Tech. Whether you're a startup looking to scale, an established enterprise seeking to innovate, or a nonprofit striving to make a difference, we have the expertise and resources to help you achieve your goals.
                   <br><br>
-                  Resolve Queries with Ease: Count on our devoted support team for lucid and insightful responses, enriching your comprehension and empowering your academic odyssey.
+                  Transform your business with Treyas Info Tech. Schedule a consultation today and take the first step towards a brighter future!
                   <br><br>
-                  Smooth Academic Navigation: Glide seamlessly through your educational voyage, equipped with indispensable support not just to endure but to flourish in your academic endeavors.
-                  <br><br>
-                  Customized Study Approaches: Amplify your learning journey with bespoke study strategies meticulously crafted for your success. Lean on our seasoned team for advice that elevates your academic achievements.
-                </p>
-              </div>
-              <div class="col clockinner1 clockinner">
-                <h1 class="days">150</h1>
-                <span class="smalltext">Days</span>
-              </div>
-              <div class="col clockinner clockinner1">
-                <h1 class="hours">23</h1>
-                <span class="smalltext">Hours</span>
-              </div>
-              <div class="col clockinner clockinner1">
-                <h1 class="minutes">47</h1>
-                <span class="smalltext">Mins</span>
-              </div>
-              <div class="col clockinner clockinner1">
-                <h1 class="seconds">59</h1>
-                <span class="smalltext">Secs</span>
-              </div>
+                  Partner with us for success!
+                    <br><br>
+                    </p>
+              </div> 
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1">
@@ -590,11 +534,12 @@
               <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t1.jpg') }}" alt="" />
             </div>
             <div class="meta-text text-sm-center">
-              <h4>Active Learning</h4>
+              <h4>Customized Solutions</h4>
               <br>
               <div class="mb-4">
                 <p>
-                  Engage in an enriched classroom experience with live, in-person professional training courses led by industry experts.
+                  We understand that every business is unique. That's why we take a personalized approach to every client engagement, crafting solutions that are tailored to your specific needs, goals, and challenges.
+
                 </p>
               </div>
                
@@ -607,11 +552,11 @@
             </div>
             
             <div class="meta-text text-sm-center">
-              <h4>Expert Training</h4>
+              <h4>Industry Expertise</h4>
               <br>
               <div class="mb-4">
                 <p>
-                  Immerse in transformative learning, gaining hands-on tech expertise to excel in evolving landscapes. </p>
+                  Our team of seasoned consultants brings a wealth of industry experience and deep domain knowledge to the table. From technology and finance to healthcare and retail, we have the expertise to address the diverse needs of businesses across all sectors. </p>
               </div>
                
             </div>
@@ -622,11 +567,11 @@
               <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t3.jpg') }}" alt="" />
             </div>
             <div class="meta-text text-sm-center">
-              <h4>Practical Studies</h4>
+              <h4>Strategic Insights</h4>
               <br>
               <div class="mb-4">
                 <p>
-                  Navigate tech complexities with real-world projects, gaining hands-on experience beyond the classroom.
+                  We go beyond surface-level solutions to provide strategic insights that drive long-term success. Whether you're looking to enter new markets, optimize operations, or launch innovative products, we help you make informed decisions that propel your business forward.
                 </p>
               </div>
               
@@ -634,23 +579,25 @@
           </div>
 
           <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
-            <br><br><br><br>
+             
             <div class="thumb d-flex justify-content-sm-center">
               
               <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t4.jpg') }}" alt="" />
             </div>
             
             <div class="meta-text text-sm-center">
-              <h4>Comprehensive Career Support</h4>
+              <h4>Collaborative Partnership</h4>
               <br> 
               <div class="mb-4">
                 <p>
-                  Elevate your career journey: personalized resume building, interview prep, exclusive access, interactive sessions.
+                  We believe in building strong, collaborative partnerships with our clients. From initial consultation to project implementation and beyond, we work closely with you every step of the way to ensure alignment, transparency, and success.
                 </p>
               </div>
                
             </div>
           </div>
+
+           
         </div>
       </div>
     </section>
@@ -690,7 +637,7 @@
               <div class="event_details ">
                  <h3 class="text-white">Explore Our Campus with a Guided Tour.</h3>
                 <p>
-                  Immerse yourself in the vibrant learning atmosphere of Banjara Hills Campus – School of Technology & AI. Beyond a physical space, it's a hub for growth, collaboration, and innovation.  
+                  Immerse yourself in the vibrant learning atmosphere of Whitefield Campus – School of Technology & AI. Beyond a physical space, it's a hub for growth, collaboration, and innovation.  
                 </p>
                  
               </div>
@@ -800,14 +747,14 @@
       <div class="col-lg-4 col-md-6 single-footer-widget">
         <h4>Top Enrolled Courses</h4>
            <ul>
-            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+              
             <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
             <li><a href="{{ url_for('Tableau') }}">Tableau</a></li>
             <li><a href="{{ url_for('SQL') }}">SQL</a></li>
             <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
             <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
             <li><a href="{{ url_for('Python') }}">Python</a></li>
-            <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+              
             <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
             <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
           </ul>
@@ -819,22 +766,22 @@
           <li><a href="{{ url_for('index') }}">Home
              </a></li>
           <li><a href="{{ url_for('about') }}">About </a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms of Service</a></li>
+           
+          <li><a href="{{ url_for('terms_and_conditions')}}">Terms of Service</a></li>
         </ul>
       </div>
       
       
-      <div class="col-lg-3 col-md-6 single-footer-widget">
-        <h4>Treyas Info Tech PVT LTD</h4>
+      <div id="contact" class="col-lg-3 col-md-6 single-footer-widget">
+        <h4>Contact us</h4>
         <!-- Email Link -->
         <p>Email: <a href="mailto:info@treyas.in" class="text-white">info@treyas.in</a></p>
 
         <!-- WhatsApp Link -->
-        <p>WhatsApp: <a href="https://wa.me/+91 96639 61274" class="text-white" target="_blank">+91 96639 61274</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+919663961274" class="text-white" target="_blank">+91 96639 61274</a></p>
 
         <!-- Google Maps Link -->
-        <p class="text-white">Location: Banjara Hills, Hyderabad</a></p>
+        <p class="text-white">Location: Jbr Tech Park, 6th Rd, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066</a></p>
 
         
       </div>
@@ -842,7 +789,7 @@
     </div>
    
     <div class="row footer-bottom d-flex justify-content-between">
-      <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+      <p class="col-lg-8 col-sm-12 footer-text text-white">
 
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by Treyas Info Tech PVT LTD
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

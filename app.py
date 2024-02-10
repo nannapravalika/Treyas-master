@@ -13,6 +13,8 @@ from flask_migrate import Migrate
 app = Flask(__name__)
 app.secret_key = 'treyas19012024'
 
+# set DATABASE_URL=postgresql://treyas_user:MiO3siLFd4jS5CUTjE79840SZYszUfwZ@dpg-cmv6jc0l5elc73eckmlg-a.oregon-postgres.render.com/treyas
+
 class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     # postgresql://treyas_user:MiO3siLFd4jS5CUTjE79840SZYszUfwZ@dpg-cmv6jc0l5elc73eckmlg-a.oregon-postgres.render.com/treyas
@@ -48,13 +50,15 @@ def index():
 def about():
     return render_template('about-us.html')
 
+@app.route('/Terms and Conditions')
+def terms_and_conditions():
+    return render_template('terms_and_conditions.html')
+
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
 
-@app.route('/Technology training')
-def Technology_training():
-    return render_template('Technology_training.html')
+ 
 
 @app.route('/Power BI')
 def Power_BI():
@@ -80,9 +84,6 @@ def Full_stack_development():
 def Python():
     return render_template('Python.html')
 
-@app.route('/Product management courses')
-def Product_management_courses():
-    return render_template('Product_management_courses.html')
 
 @app.route('/Product management and analytics')
 def Product_management_and_analytics():
@@ -95,6 +96,8 @@ def enroll():
 @app.route('/Agile methodologies training')
 def Agile_methodologies_training():
     return render_template('Agile_methodologies_training.html')
+
+ 
 
 @app.route('/submit', methods=['POST'])
 def submit():

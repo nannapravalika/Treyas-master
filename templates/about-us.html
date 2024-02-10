@@ -52,7 +52,7 @@
           </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg  ">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{{ url_for('index') }}" >
@@ -76,27 +76,26 @@
               id="navbarSupportedContent"
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item ">
+                <li class="nav-item active">
                   <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link  " href="{{ url_for('about') }}">About</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
                 </li>
                  
                 <li class="nav-item submenu dropdown">
                   <a
-                    href="#"
-                    class="nav-link dropdown-toggle "
+                    href="{{ url_for('courses') }}"
+                    class="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                     role="button"
                     aria-haspopup="true"
                     aria-expanded="false"
                     >Courses</a
                   >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Technology_training') }}">Technology training</a>
-                    </li>
+                  <ul class="dropdown-menu row">
+                    <div class="col-6">
+                   <h5 class="navbar-h5"> Technology training </h5>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Power_BI') }}">Power BI</a>
                     </li>
@@ -115,19 +114,21 @@
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Python') }}">Python</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Product_management_courses') }}">Product management courses</a>
-                    </li>
+                  </div>
+                    <div class="col-6">
+                    <h5 class="navbar-h5">Product management courses</h5>
+                     
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a>
                     </li>
+                  </div>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -175,22 +176,17 @@
           <div class="col-lg-6">
             <div class="h_blog_text">
               <div class="h_blog_text_inner left right">
-                <h4>Welcome to our Institute</h4>
-                <h6>Join the quest for tech excellence at the Banjara Hills Campus in Hyderabad - School of Technology & AI.</h6>
+                <h4>Welcome to Treyas Info Tech and Consulting Pvt Ltd : Your Strategic Partner for Business Success!
+                </h4>
+                <h6>Join the quest for tech excellence at the Whitefield Campus in Banglore.</h6>
                 <br>
                 <p>
-                  Embark on a journey into the future with the School of Tech and AI. We are the incubator for minds that will shape the technological landscape of tomorrow.
-                  <br> 
-                  Our commitment lies in providing cutting-edge professional training courses and state-of-the-art facilities, empowering students to harness the power of technology and artificial intelligence.
+                  At Treyas Info Tech, we specialize in providing tailored solutions and expert guidance to help businesses thrive in today's dynamic market landscape. 
                 </p>
                 <p>
-                  From exploring the realms of Data Science and AI to mastering Cybersecurity and more, we are dedicated to cultivating the skills that drive progress in the digital age. 
-                  <br>
-                  Welcome to a place where innovation meets education, and the future unfolds in every lesson we teach.
+                  With a proven track record of delivering results, we are your trusted partner for driving growth, innovation, and transformation.
                 </p>
-                <a class="primary-btn" href="#">
-                  Learn More <i class="ti-arrow-right ml-1"></i>
-                </a>
+                 
               </div>
             </div>
           </div>
@@ -205,7 +201,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-12">
             <div class="main_title">
-              <h2 class="mb-3 text-white">Keys to Boost Your Professional Growth</h2>
+              <h2 class="mb-3 text-white">Our Services</h2>
               <p>
                 Elevate your career to new heights with confidence and expertise.
               </p>
@@ -217,9 +213,9 @@
             <div class="single_feature">
               <div class="icon"><span class="flaticon-student"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Diverse Skill Mastery</h4>
+                <h4 class="mt-3 mb-2">Strategy Consulting:</h4>
                 <p>
-                  Acquire a versatile skill set, confidently navigating and excelling in various industry challenges. Ensure readiness for a spectrum of professional scenarios with a comprehensive foundation.
+                  Develop strategic plans that align with your business objectives, identify growth opportunities, and navigate market challenges with confidence.
                   <br><br>
                 </p>
               </div>
@@ -230,10 +226,10 @@
             <div class="single_feature">
               <div class="icon"><span class="flaticon-book"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Mentorship Prowess</h4>
+                <h4 class="mt-3 mb-2">Digital Transformation</h4>
                 <p>
-                  Elevate your career through Premier Mentorship, gaining tailored guidance and industry insights from seasoned experts. Harness mentorship prowess for a transformative impact on your professional journey.
-                <br> <br>
+                  Embrace digital technologies to streamline processes, enhance customer experiences, and drive innovation across your organization.
+                  <br> <br>
                 </p>
               </div>
             </div>
@@ -243,17 +239,106 @@
             <div class="single_feature">
               <div class="icon"><span class="flaticon-earth"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Real-world Proficiency</h4>
-                <p>
-                  Attain practical wisdom by actively participating in industry challenges and hands-on projects. Put theory into action through Practical Deployment in Real-world Settings, developing a robust skill set honed in real-world scenarios.
+                <h4 class="mt-3 mb-2">Operations Improvement</h4>
+                <p>Optimize your operations for maximum efficiency and effectiveness, from supply chain management to process optimization and workflow automation.
+                </br></br>
                 </p>
               </div>
             </div>
           </div>
+           
         </div>
       </div>
     </section>
     <!--================ End Feature Area =================-->
+
+    <!--================ Start Trainers Area =================-->
+    <section class="trainer_area section_gap_top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3">The Treyas Advantage</h2>
+              <p>
+                We offer a transformative educational experience, blending advanced technology, personalized strategies, and expert guidance for unparalleled success.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center d-flex align-items-center">
+          <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+            <div class="thumb d-flex justify-content-sm-center">
+              <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t1.jpg') }}" alt="" />
+            </div>
+            <div class="meta-text text-sm-center">
+              <h4>Customized Solutions</h4>
+              <br>
+              <div class="mb-4">
+                <p>
+                  We understand that every business is unique. That's why we take a personalized approach to every client engagement, crafting solutions that are tailored to your specific needs, goals, and challenges.
+
+                </p>
+              </div>
+               
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+            <div class="thumb d-flex justify-content-sm-center">
+              <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t2.jpg') }}" alt="" />
+            </div>
+            
+            <div class="meta-text text-sm-center">
+              <h4>Industry Expertise</h4>
+              <br>
+              <div class="mb-4">
+                <p>
+                  Our team of seasoned consultants brings a wealth of industry experience and deep domain knowledge to the table. From technology and finance to healthcare and retail, we have the expertise to address the diverse needs of businesses across all sectors. </p>
+              </div>
+               
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+            <div class="thumb d-flex justify-content-sm-center">
+              <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t3.jpg') }}" alt="" />
+            </div>
+            <div class="meta-text text-sm-center">
+              <h4>Strategic Insights</h4>
+              <br>
+              <div class="mb-4">
+                <p>
+                  We go beyond surface-level solutions to provide strategic insights that drive long-term success. Whether you're looking to enter new markets, optimize operations, or launch innovative products, we help you make informed decisions that propel your business forward.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 single-trainer">
+             
+            <div class="thumb d-flex justify-content-sm-center">
+              
+              <img class="img-fluid" src="{{ url_for('static', filename='img/trainer/t4.jpg') }}" alt="" />
+            </div>
+            
+            <div class="meta-text text-sm-center">
+              <h4>Collaborative Partnership</h4>
+              <br> 
+              <div class="mb-4">
+                <p>
+                  We believe in building strong, collaborative partnerships with our clients. From initial consultation to project implementation and beyond, we work closely with you every step of the way to ensure alignment, transparency, and success.
+                </p>
+              </div>
+               
+            </div>
+          </div>
+
+           
+        </div>
+      </div>
+    </section>
+    <!--================ End Trainers Area =================-->
 
    <!--================ Start Testimonial Area =================-->
    <div class="testimonial_area section_gap">
@@ -347,14 +432,14 @@
       <div class="col-lg-4 col-md-6 single-footer-widget">
         <h4>Top Enrolled Courses</h4>
            <ul>
-            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+            
             <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
             <li><a href="{{ url_for('Tableau') }}">Tableau</a></li>
             <li><a href="{{ url_for('SQL') }}">SQL</a></li>
             <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
             <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
             <li><a href="{{ url_for('Python') }}">Python</a></li>
-            <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+              
             <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
             <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
           </ul>
@@ -367,21 +452,21 @@
              </a></li>
           <li><a href="{{ url_for('about') }}">About </a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="{{ url_for('terms_and_conditions')}}">Terms of Service</a></li>
         </ul>
       </div>
       
       
-      <div class="col-lg-3 col-md-6 single-footer-widget">
+      <div id="contact" class="col-lg-3 col-md-6 single-footer-widget">
         <h4>Treyas Info Tech PVT LTD</h4>
         <!-- Email Link -->
         <p>Email: <a href="mailto:info@treyas.in" class="text-white">info@treyas.in</a></p>
 
         <!-- WhatsApp Link -->
-        <p>WhatsApp: <a href="https://wa.me/+91 96639 61274" class="text-white" target="_blank">+91 96639 61274</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+919663961274" class="text-white" target="_blank">+91 96639 61274</a></p>
 
         <!-- Google Maps Link -->
-        <p class="text-white">Location: Banjara Hills, Hyderabad</a></p>
+        <p class="text-white">Location: Jbr Tech Park, 6th Rd, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066 </a></p>
 
         
       </div>

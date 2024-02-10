@@ -27,77 +27,6 @@
         {% endif %}
     {% endwith %}
   </head>
-  <style>
-    
-    
-    /* Button used to open the contact form - fixed at the bottom of the page */
-    .open-button {
-      background-color: #555;
-      color: white;
-      padding: 16px 20px;
-      border: none;
-      cursor: pointer;
-      opacity: 0.8;
-      position: fixed;
-      bottom: 23px;
-      right: 28px;
-      width: 280px;
-    }
-    
-    /* The popup form - hidden by default */
-    .form-popup {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      right: 15px;
-      border: 3px solid #f1f1f1;
-      z-index: 9;
-    }
-    
-    /* Add styles to the form container */
-    .form-container {
-      max-width: 300px;
-      padding: 10px;
-      background-color: white;
-    }
-    
-    /* Full-width input fields */
-    .form-container input[type=text], .form-container input[type=password] {
-      width: 100%;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      border: none;
-      background: #f1f1f1;
-    }
-    
-    /* When the inputs get focus, do something */
-    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-      background-color: #ddd;
-      outline: none;
-    }
-    
-    /* Set a style for the submit/login button */
-    .form-container .btn {
-      background-color: #04AA6D;
-      color: white;
-      padding: 16px 20px;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      margin-bottom:10px;
-      opacity: 0.8;
-    }
-    
-    /* Add a red background color to the cancel button */
-    .form-container .cancel {
-      background-color: red;
-    }
-    
-    /* Add some hover effects to buttons */
-    .form-container .btn:hover, .open-button:hover {
-      opacity: 1;
-    }
-    </style>
  
 
   <body>
@@ -123,7 +52,7 @@
           </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{{ url_for('index') }}" >
@@ -156,7 +85,7 @@
                  
                 <li class="nav-item submenu dropdown">
                   <a
-                    href="#"
+                    href="{{ url_for('courses') }}"
                     class="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                     role="button"
@@ -164,10 +93,9 @@
                     aria-expanded="false"
                     >Courses</a
                   >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Technology_training') }}">Technology training</a>
-                    </li>
+                  <ul class="dropdown-menu row">
+                    <div class="col-6">
+                   <h5 class="navbar-h5"> Technology training </h5>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Power_BI') }}">Power BI</a>
                     </li>
@@ -186,19 +114,21 @@
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Python') }}">Python</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Product_management_courses') }}">Product management courses</a>
-                    </li>
+                  </div>
+                    <div class="col-6">
+                    <h5 class="navbar-h5">Product management courses</h5>
+                     
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a>
                     </li>
+                  </div>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -219,7 +149,7 @@
         <div class="overlay"></div>
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <div class="banner_content text-center">
                 <h2>Agile methodologies training</h2>
                 <div class="page_link">
@@ -235,260 +165,294 @@
     </section>
     <!--================End Home Banner Area =================-->
 
-    <!--================ Start Course Details Area =================-->
-    <section class="course_details_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 course_details_left">
-                    <div class="main_image">
-                        <img class="img-fluid" src="img/courses/course-details.jpg" alt="">
-                    </div>
-                    <div class="content_wrapper">
-                        <h4 class="title">Cyber Security and Ethical Hacking</h4>
-                        <div class="content">
-                          Embark on an exciting journey into the dynamic realm of Cybersecurity and Ethical Hacking, where every click propels you towards digital mastery. Immerse yourself in hands-on training through practical labs, simulations, and real-world experiences that mirror the challenges of the ever-evolving Cybersecurity and Ethical Hacking landscape.
-                          <br>
-                          <br>
-                          Our comprehensive course covers essential domains, including Network Security, Cloud Security, Ethical Hacking, Penetration Testing, Web Application Security, Mobile Application Security, and Exploitation Techniques with countermeasures.
-                          <br>
-                          <br>
-                          With a stellar 4.9-star rating, Treyas proudly claims the title of the #1 International Training Institute, recognized by prestigious forums such as the British Columbia Times, Business World, Avalon Global, and more. Choose Treyas as your premier destination for mastering high-demand skills in Cybersecurity and Ethical Hacking.
-                           
-                             
-                        </div>
+     <!--================ Start Course Details Area =================-->
+     <section class="course_details_area section_gap">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 course_details_left">
+                  <div class="main_image">
+                      <img class="img-fluid" src="img/courses/course-details.jpg" alt="">
+                  </div>
+                  <div class="content_wrapper">
+                      <h4 class="title">Welcome to Agile Mastery: Your Premier Destination for Agile Methodology Training!
 
-                        <h4 class="title">Captivating Security Subjects</h4>
-                        <div class="content">
-                          Embark on an intellectually stimulating journey with topics designed to captivate your curiosity. Begin by unraveling the essentials of Security, Data Encryption, and Compliance.
-                          <br><br>
-                           Dive deeper into the intricacies of advanced realms, exploring topics like Threat Detection, Ethical Hacking Techniques, Network Security, Web and Mobile Application Security, and the cutting-edge field of Security Automation.
-                           <br><br>
-                            Stay ahead of the curve by immersing yourself in these engaging subjects and keeping abreast of emerging trends in the ever-evolving landscape of cybersecurity. 
-                        </div>
 
-                        <h4 class="title">Learning Pathway Guide</h4>
-                        <div class="content">
-                          Navigate from fundamentals to advanced concepts, engage in hands-on labs using cutting-edge tools, and apply learning to real-world scenarios. 
-                          <br><br>
-                          The journey encompasses comprehensive modules, mentor-guided exercises, and industry insights, ensuring a robust and practical learning experience.
-                        </div>
+                      </h4>
+                      <div class="content">
+                        Are you eager to transform your approach to project management and drive innovation in your organization? You're in the right place! Agile Mastery is your comprehensive learning platform designed to equip you with the skills and knowledge needed to master Agile methodologies and lead successful Agile teams.  
+                      </div>
 
-                        <h4 class="title">Course Outline</h4>
-                        <div class="content">
-                            <ul class="course_list">
-                                <li class="justify-content-between d-flex">
-                                    <p>Introduction to Cybersecurity and Ethical Hacking</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Essentials of Networking</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Advanced Networking Concepts</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Windows Security</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Cloud Technology and Security</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Linux Security</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Exploiting Networks</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Securing Web Applications</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                    <p>Securing Mobile Application</p>
-                                    <a class="primary-btn text-uppercase" href="#">View Details</a>
-                                </li>
-                                <li class="justify-content-between d-flex">
-                                  <p>Project Assignment</p>
-                                  <a class="primary-btn text-uppercase" href="#">View Details</a>
-                              </li>
+                      <h4 class="title">Why Choose Agile Mastery?
+                      </h4>
+
+                      <h6 class="sub-title">Structured Learning Paths</h6>
+                      <div class="content">
+                        Whether you're new to Agile or looking to deepen your Agile expertise, our structured learning paths cater to all levels of proficiency. From Agile fundamentals to advanced Agile practices, we provide a clear roadmap for your Agile journey.
+                      </div>
+                      <br>
+                      <h6 class="sub-title">Expert-Led Courses</h6>
+                      <div class="content">
+                        Learn from Agile practitioners and certified Scrum Masters with extensive experience in Agile implementation. Our instructors are dedicated to providing engaging, practical, and up-to-date training that empowers you to succeed in Agile environments.
+                         </div>
+                      <br>
+                      <h6 class="sub-title">Hands-On Practice</h6>
+                      <div class="content">
+                        Theory is important, but practice is essential! Dive into our hands-on exercises, simulations, and real-world case studies to gain practical experience in Agile principles, frameworks, and techniques. Learn how to apply Agile methodologies to your projects and drive successful outcomes.
+                       </div>
+                      <br>
+                      <h6 class="sub-title">Real-World Projects</h6>
+                      <div class="content">
+                        Put your Agile skills to the test with real-world projects that mirror industry scenarios. Collaborate with teammates, plan and execute Agile sprints, and deliver value to stakeholders in a simulated Agile environment. Build a portfolio that showcases your Agile expertise and experience.
+                      </div>
+                      <br>
+                      <h6 class="sub-title">Community Collaboration</h6>
+                      <div class="content">
+                        Join a vibrant community of Agile enthusiasts, learners, and experts. Engage in discussions, share insights, and collaborate on Agile projects with fellow learners from around the world. Learning Agile is not just about acquiring skills but also about building connections and sharing knowledge.
+                       </div>
+                      <br>
+                      <h6 class="sub-title">Continuous Updates</h6>
+                      <div class="content">
+                        Stay ahead of the curve with our regularly updated content. Explore the latest Agile frameworks, methodologies, and best practices to ensure that your Agile skills remain sharp and relevant in today's fast-paced business environment.
+                      </div>
+
+                      <h4 class="title">Our Course Offerings
+                      </h4>
+                      <div class="content">
+                          <ul class="course_list">
                               <li class="justify-content-between d-flex">
-                                <p>Final Project</p>
-                                <a class="primary-btn text-uppercase" href="#">View Details</a>
-                            </li>
-                            <li class="justify-content-between d-flex">
-                              <p>Professional Advancement</p>
-                              <a class="primary-btn text-uppercase" href="#">View Details</a>
-                          </li>
+                                  <p>Agile Fundamentals</p>
+                                  <a class="primary-btn text-uppercase" href="#" onclick="toggleDetails('agileDetails1');return false;">View Details</a>
+                                  
+                              </li>
+                              <div id="agileDetails1" class="details">
+                                Master the core principles and values of Agile, including iterative development, customer collaboration, and responding to change. Learn how to embrace uncertainty and deliver value incrementally in Agile projects.
+                              </div>
+                              <li class="justify-content-between d-flex">
+                                <p>Scrum Framework</p>
+                                <a class="primary-btn text-uppercase" href="#" onclick="toggleDetails('agileDetails2');return false;">View Details</a>
+                                
+                              </li>
+                              <div id="agileDetails2" class="details">
+                                Dive into the Scrum framework, the most widely used Agile methodology. Learn about Scrum roles, artifacts, ceremonies, and best practices for running successful Scrum teams and projects.
 
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                              </div>
+                              <li class="justify-content-between d-flex">
+                                <p>Kanban Method</p>
+                                <a class="primary-btn text-uppercase" href="#" onclick="toggleDetails('agileDetails3');return false;">View Details</a>
+                                
+                              </li>
+                              <div id="agileDetails3" class="details">
+                                Explore the Kanban method for visualizing work, limiting work in progress, and maximizing flow. Learn how to implement Kanban boards, manage workflow, and continuously improve processes in Agile teams.
+
+                              </div>
+                              <li class="justify-content-between d-flex">
+                                <p>Lean Principles</p>
+                                <a class="primary-btn text-uppercase" href="#" onclick="toggleDetails('agileDetails4');return false;">View Details</a>
+                                
+                              </li>
+                              <div id="agileDetails4" class="details">
+                                Discover Lean principles and practices for eliminating waste, optimizing processes, and delivering value to customers. Learn how to apply Lean thinking to Agile projects and drive efficiency and effectiveness in your organization.
+
+                              </div>
+                              <li class="justify-content-between d-flex">
+                                <p>Agile Leadership</p>
+                                <a class="primary-btn text-uppercase" href="#" onclick="toggleDetails('agileDetails5');return false;">View Details</a>
+                                
+                              </li>
+                              <div id="agileDetails5" class="details">
+                                Develop essential leadership skills for leading Agile teams and fostering a culture of continuous improvement and innovation. Learn how to empower teams, remove impediments, and drive Agile transformation in your organization.
+
+                              </div>
+                              
+
+                          </ul>
+                      </div>
+                      <h4 class="title">Ready to Get Started?
 
 
-                <div class="col-lg-4 right-contents">
-                    <ul>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Meet Your Instructor</p>
-                                <span class="or">Passionate expert, your gateway to industry.</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>In-Depth Learning Program</p>
-                                <span>Expertly crafted curriculum, blending theory and practice.</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Available Seats </p>
-                                <span>15</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Schedule </p>
-                                <span>2.00 pm to 4.00 pm</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="{{ url_for('enroll') }}"   class="  primary-btn2 text-uppercase enroll rounded-0 ">Download Brochure</a>
-                    
-                    <h4 class="title">Reviews</h4>
-                    <div class="content">
-                        <div class="review-top row pt-40">
-                            <div class="col-lg-12">
-                                <h6 class="mb-15">Provide Your Rating</h6>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Quality</span>
-                                    <div class="star">
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star"></i>
-                                        <i class="ti-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Puncuality</span>
-                                    <div class="star">
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star"></i>
-                                        <i class="ti-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                                <div class="d-flex flex-row reviews justify-content-between">
-                                    <span>Quality</span>
-                                    <div class="star">
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star checked"></i>
-                                        <i class="ti-star"></i>
-                                        <i class="ti-star"></i>
-                                    </div>
-                                    <span>Outstanding</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedeback">
-                            <h6>Your Feedback</h6>
-                            <textarea name="feedback" class="form-control" cols="10" rows="10"></textarea>
-                            <div class="mt-10 text-right">
-                                <a href="#" class="primary-btn2 text-right rounded-0 text-white">Submit</a>
-                            </div>
-                        </div>
-                        <div class="comments-area mb-30">
-                            <div class="comment-list">
-                                <div class="single-comment single-reviews justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb">
-                                            <img src="img/blog/c1.jpg" alt="">
-                                        </div>
-                                        <div class="desc">
-                                            <h5><a href="#">Naveen</a>
-                                                <div class="star">
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star"></span>
-                                                    <span class="ti-star"></span>
-                                                </div>
-                                            </h5>
-                                            <p class="comment">
-                                              Empowered by cybersecurity! Transformed from novice to ethical hacker through an intense journey. <br>
-                                              Course completed, skills acquired, now safeguarding digital frontiers.
-                                              <br> Turning passion into a secure profession, one hack at a time!
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment-list">
-                                <div class="single-comment single-reviews justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb">
-                                            <img src="img/blog/c2.jpg" alt="">
-                                        </div>
-                                        <div class="desc">
-                                            <h5><a href="#">Divya Menon</a>
-                                                <div class="star">
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star"></span>
-                                                    <span class="ti-star"></span>
-                                                </div>
-                                            </h5>
-                                            <p class="comment">
-                                              Embarked on the Full Stack Development journey with enthusiasm!  Highly recommend this transformative learning experience!
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment-list">
-                                <div class="single-comment single-reviews justify-content-between d-flex">
-                                    <div class="user justify-content-between d-flex">
-                                        <div class="thumb">
-                                            <img src="img/blog/c3.jpg" alt="">
-                                        </div>
-                                        <div class="desc">
-                                            <h5><a href="#">Arjun Patel</a>
-                                                <div class="star">
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star checked"></span>
-                                                    <span class="ti-star"></span>
-                                                    <span class="ti-star"></span>
-                                                </div>
-                                            </h5>
-                                            <p class="comment">
-                                              Embarked on a rewarding journey in Java Programming!  Successfully completed the program, acquiring essential skills for Java development.
-                                              <br> Now, ready to tackle real-world projects with confidence.
-                                              <br> A fantastic learning experience that has truly enhanced my programming proficiency.  
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ End Course Details Area =================-->
+                      </h4>
+                      <div class="content">
+                        Empower yourself with the skills and knowledge to lead successful Agile projects and teams. 
+                        <br>
+                        Whether you're a project manager, team lead, or aspiring Agile coach, Agile Mastery is your pathway to success in the world of Agile methodology and project management.
+                        <br>
+                        Transform your career with Agile Mastery. Join us and unlock your potential to drive innovation and deliver value with Agile methodologies!
+                        <br>
+                        Start your Agile journey now!
 
+                      </div>
+                      <br>
+                      <a class="primary-btn text-uppercase" href="{{ url_for('enroll') }}" >Enroll Now</a>
+                                
+                  </div>
+              </div>
+              <script>
+                function toggleDetails(detailsId) {
+                    var detailsElement = document.getElementById(detailsId);
+                    if (detailsElement.style.display === 'none' || detailsElement.style.display === '') {
+                        detailsElement.style.display = 'block';
+                    } else {
+                        detailsElement.style.display = 'none';
+                    }
+                }
+            </script>
+
+              <div class="col-lg-4 right-contents">
+                  <ul>
+                      <li>
+                          <a class="justify-content-between d-flex" href="#">
+                              <p>Meet Your Instructor</p>
+                              <span class="or">Passionate expert, your gateway to industry.</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="justify-content-between d-flex" href="#">
+                              <p>In-Depth Learning Program</p>
+                              <span>Expertly crafted curriculum, blending theory and practice.</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="justify-content-between d-flex" href="#">
+                              <p>Available Seats </p>
+                              <span>15</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="justify-content-between d-flex" href="#">
+                              <p>Schedule </p>
+                              <span>2.00 pm to 4.00 pm</span>
+                          </a>
+                      </li>
+                  </ul>
+                  <a href="{{ url_for('enroll') }}"   class="  primary-btn2 text-uppercase enroll rounded-0 ">Download Brochure</a>
+                  <h4 class="title">Reviews</h4>
+                  <div class="content">
+                      <div class="review-top row pt-40">
+                          <div class="col-lg-12">
+                              <h6 class="mb-15">Provide Your Rating</h6>
+                              <div class="d-flex flex-row reviews justify-content-between">
+                                  <span>Quality</span>
+                                  <div class="star">
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star"></i>
+                                      <i class="ti-star"></i>
+                                  </div>
+                                  <span>Outstanding</span>
+                              </div>
+                              <div class="d-flex flex-row reviews justify-content-between">
+                                  <span>Puncuality</span>
+                                  <div class="star">
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star"></i>
+                                      <i class="ti-star"></i>
+                                  </div>
+                                  <span>Outstanding</span>
+                              </div>
+                              <div class="d-flex flex-row reviews justify-content-between">
+                                  <span>Quality</span>
+                                  <div class="star">
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star checked"></i>
+                                      <i class="ti-star"></i>
+                                      <i class="ti-star"></i>
+                                  </div>
+                                  <span>Outstanding</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="feedeback">
+                          <h6>Your Feedback</h6>
+                          <textarea name="feedback" class="form-control" cols="10" rows="10"></textarea>
+                          <div class="mt-10 text-right">
+                              <a href="#" class="primary-btn2 text-right rounded-0 text-white">Submit</a>
+                          </div>
+                      </div>
+                      <div class="comments-area mb-30">
+                          <div class="comment-list">
+                              <div class="single-comment single-reviews justify-content-between d-flex">
+                                  <div class="user justify-content-between d-flex">
+                                      <div class="thumb">
+                                          <img src="img/blog/c1.jpg" alt="">
+                                      </div>
+                                      <div class="desc">
+                                          <h5><a href="#">Naveen</a>
+                                              <div class="star">
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star"></span>
+                                                  <span class="ti-star"></span>
+                                              </div>
+                                          </h5>
+                                          <p class="comment">
+                                            Empowered by cybersecurity! Transformed from novice to ethical hacker through an intense journey. <br>
+                                            Course completed, skills acquired, now safeguarding digital frontiers.
+                                            <br> Turning passion into a secure profession, one hack at a time!
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="comment-list">
+                              <div class="single-comment single-reviews justify-content-between d-flex">
+                                  <div class="user justify-content-between d-flex">
+                                      <div class="thumb">
+                                          <img src="img/blog/c2.jpg" alt="">
+                                      </div>
+                                      <div class="desc">
+                                          <h5><a href="#">Divya Menon</a>
+                                              <div class="star">
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star"></span>
+                                                  <span class="ti-star"></span>
+                                              </div>
+                                          </h5>
+                                          <p class="comment">
+                                            Embarked on the Full Stack Development journey with enthusiasm!  Highly recommend this transformative learning experience!
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="comment-list">
+                              <div class="single-comment single-reviews justify-content-between d-flex">
+                                  <div class="user justify-content-between d-flex">
+                                      <div class="thumb">
+                                          <img src="img/blog/c3.jpg" alt="">
+                                      </div>
+                                      <div class="desc">
+                                          <h5><a href="#">Arjun Patel</a>
+                                              <div class="star">
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star checked"></span>
+                                                  <span class="ti-star"></span>
+                                                  <span class="ti-star"></span>
+                                              </div>
+                                          </h5>
+                                          <p class="comment">
+                                            Embarked on a rewarding journey in Java Programming!  Successfully completed the program, acquiring essential skills for Java development.
+                                            <br> Now, ready to tackle real-world projects with confidence.
+                                            <br> A fantastic learning experience that has truly enhanced my programming proficiency.  
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--================ End Course Details Area =================-->
 
 <!--================ Start footer Area  =================-->
 <footer class="footer-area section_gap">
@@ -500,14 +464,14 @@
       <div class="col-lg-4 col-md-6 single-footer-widget">
         <h4>Top Enrolled Courses</h4>
            <ul>
-            <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+              
             <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
             <li><a href="{{ url_for('Tableau') }}">Tableau</a></li>
             <li><a href="{{ url_for('SQL') }}">SQL</a></li>
             <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
             <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
             <li><a href="{{ url_for('Python') }}">Python</a></li>
-            <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+              
             <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
             <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
           </ul>
@@ -520,21 +484,21 @@
              </a></li>
           <li><a href="{{ url_for('about') }}">About </a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="{{ url_for('terms_and_conditions')}}">Terms of Service</a></li>
         </ul>
       </div>
       
       
-      <div class="col-lg-3 col-md-6 single-footer-widget">
+      <div id="contact" class="col-lg-3 col-md-6 single-footer-widget">
         <h4>Treyas Info Tech PVT LTD</h4>
         <!-- Email Link -->
         <p>Email: <a href="mailto:info@treyas.in" class="text-white">info@treyas.in</a></p>
 
         <!-- WhatsApp Link -->
-        <p>WhatsApp: <a href="https://wa.me/+91 96639 61274" class="text-white" target="_blank">+91 96639 61274</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+919663961274" class="text-white" target="_blank">+91 96639 61274</a></p>
 
         <!-- Google Maps Link -->
-        <p class="text-white">Location: Banjara Hills, Hyderabad</a></p>
+        <p class="text-white">Location: Jbr Tech Park, 6th Rd, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066 </a></p>
 
         
       </div>

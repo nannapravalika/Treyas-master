@@ -52,7 +52,7 @@
           </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg  ">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{{ url_for('index') }}" >
@@ -76,27 +76,26 @@
               id="navbarSupportedContent"
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item ">
+                <li class="nav-item active">
                   <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link  " href="{{ url_for('about') }}">About</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
                 </li>
                  
                 <li class="nav-item submenu dropdown">
                   <a
-                    href="#"
-                    class="nav-link dropdown-toggle "
+                    href="{{ url_for('courses') }}"
+                    class="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                     role="button"
                     aria-haspopup="true"
                     aria-expanded="false"
                     >Courses</a
                   >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Technology_training') }}">Technology training</a>
-                    </li>
+                  <ul class="dropdown-menu row">
+                    <div class="col-6">
+                   <h5 class="navbar-h5"> Technology training </h5>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Power_BI') }}">Power BI</a>
                     </li>
@@ -115,19 +114,21 @@
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Python') }}">Python</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('Product_management_courses') }}">Product management courses</a>
-                    </li>
+                  </div>
+                    <div class="col-6">
+                    <h5 class="navbar-h5">Product management courses</h5>
+                     
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a>
                     </li>
+                  </div>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link search" id="search">
@@ -137,7 +138,7 @@
               </ul>
             </div>
           </div>
-        </nav>
+        </nav
       </div>
     </header>
     <!--================ End Header Menu Area =================-->
@@ -202,14 +203,14 @@
         <div class="col-lg-4 col-md-6 single-footer-widget">
           <h4>Top Enrolled Courses</h4>
              <ul>
-              <li><a href="{{ url_for('Technology_training') }}">Technology training</a></li>
+                
               <li><a href="{{ url_for('Power_BI') }}">Power BI</a></li>
               <li><a href="{{ url_for('Tableau') }}">Tableau</a></li>
               <li><a href="{{ url_for('SQL') }}">SQL</a></li>
               <li><a href="{{ url_for('Salesforce') }}">Salesforce</a></li>
               <li><a href="{{ url_for('Full_stack_development') }}">Full stack development</a></li>
               <li><a href="{{ url_for('Python') }}">Python</a></li>
-              <li><a href="{{ url_for('Product_management_courses') }}">Product management courses</a></li>
+                
               <li><a href="{{ url_for('Product_management_and_analytics') }}">Product management and analytics</a></li>
               <li><a href="{{ url_for('Agile_methodologies_training') }}">Agile methodologies training</a></li>  
             </ul>
@@ -222,7 +223,7 @@
                </a></li>
             <li><a href="{{ url_for('about') }}">About </a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a href="{{ url_for('terms_and_conditions')}}">Terms of Service</a></li>
           </ul>
         </div>
         
@@ -233,10 +234,10 @@
           <p>Email: <a href="mailto:info@treyas.in" class="text-white">info@treyas.in</a></p>
   
           <!-- WhatsApp Link -->
-          <p>WhatsApp: <a href="https://wa.me/+91 96639 61274" class="text-white" target="_blank">+91 96639 61274</a></p>
+          <p>WhatsApp: <a href="https://wa.me/+919663961274" class="text-white" target="_blank">+91 96639 61274</a></p>
   
           <!-- Google Maps Link -->
-          <p class="text-white">Location: Banjara Hills, Hyderabad</a></p>
+          <p class="text-white">Location: Jbr Tech Park, 6th Rd, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066 </a></p>
   
           
         </div>
