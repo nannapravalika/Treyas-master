@@ -17,7 +17,7 @@ app.secret_key = 'treyas19012024'
 
 class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    # postgresql://treyas_user:MiO3siLFd4jS5CUTjE79840SZYszUfwZ@dpg-cmv6jc0l5elc73eckmlg-a.oregon-postgres.render.com/treyas
+    postgres://treyas_qgjh_user:5z0d2j6m2UtH9lCdY4MoWvsUvtweFGvY@dpg-cpbcp1un7f5s73f99o80-a.oregon-postgres.render.com/treyas_qgjh
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 app.config.from_object(Config)
